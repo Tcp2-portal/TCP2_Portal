@@ -9,9 +9,13 @@
 /Clone/[Bb]uilds/
 /Clone/[Ll]ogs/
 /Clone/[Mm]emoryCaptures/
+/Clone/[Aa]ssets/Bruno/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
-!/Clone//[Aa]ssets/**/*.meta
+!/Clone/[Aa]ssets/**/*.meta
+
+#meta de pastaws aletórias
+/Clone/[Aa]ssets/Bruno.meta
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
