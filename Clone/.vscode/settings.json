@@ -1,8 +1,0 @@
-{
-    "omnisharp.enableAsyncCompletion": true,
-    "omnisharp.enableImportCompletion": true,
-    "omnisharp.enableMsBuildLoadProjectsOnDemand": true,
-    "omnisharp.enableRoslynAnalyzers": true,
-    "omnisharp.analyzeOpenDocumentsOnly": true,
-    "omnisharp.disableMSBuildDiagnosticWarning": true
-}
