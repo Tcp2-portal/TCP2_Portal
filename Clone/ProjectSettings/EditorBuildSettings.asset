@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Bruno/PortalDemo.unity
+    guid: bbdca0eecdb98ef43a70e729786b5f6e
   m_configObjects: {}
