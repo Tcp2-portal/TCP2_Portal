@@ -6,7 +6,6 @@ namespace Scripts
 {
     public class ResetPlayerPosition : MonoBehaviour
     {
-        //pego a malha  de um certo modelo e verifico qual o seu bounce para poder resetar a posição do player caso ele ultrapasse sua profundidade maxima
         public MeshFilter levelGeon;
         public MeshFilter outPortal;
         private Vector3 vertex;
@@ -20,10 +19,6 @@ namespace Scripts
                     this.vertex = vertex;
                 }
             }
-
-
-
-
         }
         void Update()
         {
