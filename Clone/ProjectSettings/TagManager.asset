@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Portal
   - Ground
+  - cubo
   layers:
   - Default
   - TransparentFX

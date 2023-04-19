@@ -9,8 +9,8 @@ public class Porta : MonoBehaviour
 
     private void Start() 
     {
-        position = new Vector3(2.48f, 1.45f, 24.98f);
-        transform.position = position;
+        // position = new Vector3(2.48f, 1.45f, 24.98f);
+        // transform.position = position;
     }
 
     public void MoverPorta()

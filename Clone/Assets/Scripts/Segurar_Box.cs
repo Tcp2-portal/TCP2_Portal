@@ -36,6 +36,7 @@ public class Segurar_Box : MonoBehaviour
         if(_segurando == false)
         {
             RaycastHit Hit = new RaycastHit();
+            
             if(Physics.Raycast(transform.position, transform.forward, out Hit, _distanciaMax, _layerMask, QueryTriggerInteraction.Ignore))
             {
                 Debug.DrawLine(transform.position, Hit.point, Color.red);
