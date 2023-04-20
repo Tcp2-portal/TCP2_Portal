@@ -16,6 +16,7 @@ public class PortalableObject : MonoBehaviour
 
     private new Rigidbody rigidbody;
     protected new Collider collider;
+    public bool free;
 
     private static readonly Quaternion halfTurn = Quaternion.Euler(0.0f, 180.0f, 0.0f);
 
@@ -36,6 +37,9 @@ public class PortalableObject : MonoBehaviour
 
     private void Update()
     {
+        if(!free){
+            return;
+        }
         if (inPortal == null || outPortal == null)
         {
             return;
@@ -64,6 +68,9 @@ public class PortalableObject : MonoBehaviour
 
     public void SetIsInPortal(Portal inPortal, Portal outPortal, Collider wallCollider)
     {
+        if(!free){
+            return;
+        }
         this.inPortal = inPortal;
         this.outPortal = outPortal;
 
@@ -75,6 +82,9 @@ public class PortalableObject : MonoBehaviour
 
     public void ExitPortal(Collider wallCollider)
     {
+        if(!free){
+            return;
+        }
         Physics.IgnoreCollision(collider, wallCollider, false);
         --inPortalCount;
 
@@ -87,6 +97,9 @@ public class PortalableObject : MonoBehaviour
 
     public virtual void Warp()
     {
+        if(!free){
+            return;
+        }
         var inTransform = inPortal.transform;
         var outTransform = outPortal.transform;
 

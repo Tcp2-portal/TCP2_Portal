@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 7425460518682632831}
   - component: {fileID: 8992176760423790452}
   - component: {fileID: 5974626971920615091}
+  - component: {fileID: 1157558948804561713}
   m_Layer: 0
   m_Name: cubo_azul
   m_TagString: cubo
@@ -226,6 +227,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e63a63397bf81499cf3f0b38de8ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1157558948804561713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4507787576329278946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ce4c591b25092341b792bbafab4765b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelGeon: {fileID: 0}
+  outPortal: {fileID: 0}
 --- !u!1 &5590273362856606481
 GameObject:
   m_ObjectHideFlags: 0

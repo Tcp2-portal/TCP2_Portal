@@ -1,35 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
+using UnityEngine.Rendering;
 
 public class Porta : MonoBehaviour
 {
     Vector3 position;
-    public float alturaPorta;
-
-    private void Start() 
+    public float EndPosY;
+    private float StartPosY;
+    private bool open = false;
+    public float speed = .05f;
+    private void Start()
     {
-        // position = new Vector3(2.48f, 1.45f, 24.98f);
-        // transform.position = position;
+        position = transform.localPosition;
+        StartPosY = transform.localPosition.y;
     }
 
-    public void MoverPorta()
+    public void AbrePorta()
     {
-        if(position.y < 4)
-        {
-            position.y += alturaPorta;
-            transform.position=position;
-            Debug.Log("Subiu");
-        }
+        open = true;
     }
 
     public void FecharPorta()
     {
-        if(position.y > -3)
+        open = false;
+    }
+    private void Update()
+    {
+        if (open)
         {
-            position.y -= alturaPorta;
-            transform.position=position;
-            Debug.Log("Desceu");
+            position.y = Mathf.Lerp(position.y, EndPosY, speed * Time.deltaTime);
         }
+        if (!open)
+        {
+            position.y = Mathf.Lerp(position.y, StartPosY, speed * Time.deltaTime);
+        }
+        transform.localPosition = position;
     }
 }

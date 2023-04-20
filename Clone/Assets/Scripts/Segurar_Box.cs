@@ -12,17 +12,19 @@ public class Segurar_Box : MonoBehaviour
     public GameObject _local;
     public LayerMask _layerMask;
 
-    void Start()
-    {
-    }
-
     void Update()
     {
         if(_segurando == true)
         {
+            ObjSegurando.layer = LayerMask.NameToLayer("IgnoreBody");
+            ObjSegurando.GetComponent<PortalableObject>().free = false;
             if(Input.GetKeyDown(KeyCode.E))
             {
                 _segurando = false;
+                
+                ObjSegurando.layer = LayerMask.NameToLayer("Default");
+                ObjSegurando.GetComponent<PortalableObject>().free = true;
+            
                 if(ObjSegurando.GetComponent<Rigidbody>())
                 {
                     ObjSegurando.transform.parent = null;

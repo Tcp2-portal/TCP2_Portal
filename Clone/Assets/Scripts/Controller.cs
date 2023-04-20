@@ -12,12 +12,11 @@ namespace Scripts
     public class Controller : MonoBehaviour
     {
         public float speed = 5f;
+        public float jumpForce = 5f;
         private void LateUpdate()
         {
             float VAxes = Input.GetAxis("Vertical");
             float HAxes = Input.GetAxis("Horizontal");
-
-
 
             Vector3 dir = new Vector3(HAxes, 0, VAxes);
             this.transform.Translate(dir * speed * Time.deltaTime);
