@@ -33,7 +33,7 @@ using UnityEngine;
             // else 
             if (Input.GetButtonDown("Fire2"))
             {
-                FirePortal(1, GetComponent<CinemachineBrain>()., t.forward, 250.0f);
+                FirePortal(1, t.position, t.forward, 250.0f);
             }
         }
 

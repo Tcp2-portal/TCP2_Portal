@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -63,7 +64,7 @@ namespace Scripts
             }
 
             if (portals[1].Renderer.isVisible)
-            {
+            { 
                 portalCamera.targetTexture = tempTexture2;
                 for (int i = iterations - 1; i >= 0; --i)
                 {

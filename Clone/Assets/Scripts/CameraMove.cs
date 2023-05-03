@@ -16,7 +16,6 @@ namespace Scripts
         public float jumpForce = 5f;
         public float cameraSpeed = 10.0f;
         private float raysize = 1.5f;
-        public Transform target;
         private void Awake()
         {
             Cursor.lockState = CursorLockMode.Locked;
