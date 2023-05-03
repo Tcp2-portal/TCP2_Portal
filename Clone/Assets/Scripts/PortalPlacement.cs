@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Cinemachine;
 using UnityEngine;
-namespace Scripts
-{
-    [RequireComponent(typeof(CameraMove))]
+
+[RequireComponent(typeof(CameraMove))]
     public class PortalPlacement : MonoBehaviour
     {
         [SerializeField]
         private PortalPair portals;
+        public Transform t;
 
         [SerializeField]
         private LayerMask layerMask;
@@ -24,17 +26,18 @@ namespace Scripts
 
         private void Update()
         {
-            if (Input.GetButtonDown("Fire1"))
+            // if(Input.GetButtonDown("Fire1"))
+            // {
+            //     FirePortal(0, transform.position, transform.forward, 250.0f);
+            // }
+            // else 
+            if (Input.GetButtonDown("Fire2"))
             {
-                FirePortal(0, transform.position, transform.forward, 250.0f);
-            }
-            else if (Input.GetButtonDown("Fire2"))
-            {
-                FirePortal(1, transform.position, transform.forward, 250.0f);
+                FirePortal(1, GetComponent<CinemachineBrain>()., t.forward, 250.0f);
             }
         }
 
-        private void FirePortal(int portalID, Vector3 pos, Vector3 dir, float distance)
+        public void FirePortal(int portalID, Vector3 pos, Vector3 dir, float distance)
         {
             RaycastHit hit;
             Physics.Raycast(pos, dir, out hit, distance, layerMask);
@@ -97,4 +100,3 @@ namespace Scripts
             }
         }
     }
-}
