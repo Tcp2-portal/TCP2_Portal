@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4300057071803544716}
   - component: {fileID: 5082337907952222078}
   - component: {fileID: 3976103061292238844}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: circulos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 8992176760423790452}
   - component: {fileID: 5974626971920615091}
   - component: {fileID: 1157558948804561713}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: cubo_azul
   m_TagString: cubo
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4507787576329278946}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -227,6 +227,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e63a63397bf81499cf3f0b38de8ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  free: 1
+  everActivePortal: {fileID: 0}
 --- !u!114 &1157558948804561713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,6 +243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelGeon: {fileID: 0}
   outPortal: {fileID: 0}
+  distance: 2
 --- !u!1 &5590273362856606481
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,7 +255,7 @@ GameObject:
   - component: {fileID: 5896533303491476712}
   - component: {fileID: 8270571398441140810}
   - component: {fileID: 5557763828017136945}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: coisa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,7 +336,7 @@ GameObject:
   - component: {fileID: 3175713777059469618}
   - component: {fileID: 3329692488887472193}
   - component: {fileID: 5428061938698029119}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: cubo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

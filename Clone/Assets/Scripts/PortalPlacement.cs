@@ -18,7 +18,7 @@ using UnityEngine;
         private Crosshair crosshair;
 
         private CameraMove cameraMove;
-
+        private RaycastHit hit;
         private void Awake()
         {
             cameraMove = GetComponent<CameraMove>();
@@ -33,14 +33,21 @@ using UnityEngine;
             // else 
             if (Input.GetButtonDown("Fire2"))
             {
-                FirePortal(1, t.position, t.forward, 250.0f);
+                Physics.Raycast(t.position, t.forward, out hit, 250.0f, layerMask);
+                Invoke("Fire", 0.5f);
             }
         }
-
-        public void FirePortal(int portalID, Vector3 pos, Vector3 dir, float distance)
+        public void Fire()
         {
-            RaycastHit hit;
-            Physics.Raycast(pos, dir, out hit, distance, layerMask);
+            FirePortal(1, t.position, t.forward, 250.0f, false);
+        }
+
+        public void FirePortal(int portalID, Vector3 pos, Vector3 dir, float distance, bool auto = true)
+        {
+            if(auto){
+                hit = new RaycastHit();
+                Physics.Raycast(pos, dir, out hit, distance, layerMask);
+            }
             if (hit.collider != null)
             {
                 // If we shoot a portal, recursively fire through the portal.

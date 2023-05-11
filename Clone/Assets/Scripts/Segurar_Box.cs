@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Segurar_Box : MonoBehaviour
 {
     public string[] Tags;
-    public GameObject ObjSegurando, canvas;
+    public GameObject ObjSegurando;
     [Space(30)]
     public float _distanciaMax;
     public Transform t;
@@ -13,6 +14,9 @@ public class Segurar_Box : MonoBehaviour
     public GameObject _local;
     public LayerMask _layerMask;
 
+private void Start()
+{
+}
     void Update()
     {
         if (_segurando == true)
@@ -23,7 +27,7 @@ public class Segurar_Box : MonoBehaviour
             {
                 _segurando = false;
 
-                ObjSegurando.layer = LayerMask.NameToLayer("Default");
+                ObjSegurando.layer = LayerMask.NameToLayer("Cube");
                 ObjSegurando.GetComponent<PortalableObject>().free = true;
 
                 if (ObjSegurando.GetComponent<Rigidbody>())
@@ -40,12 +44,11 @@ public class Segurar_Box : MonoBehaviour
         {
             RaycastHit Hit = new RaycastHit();
 
-            if (Physics.Raycast(t.position, t.forward, out Hit, _distanciaMax, _layerMask, QueryTriggerInteraction.Ignore))
+            if (Physics.Raycast(t.position, t.forward, out Hit, _distanciaMax, _layerMask))
             {
-
                 for (int x = 0; x < Tags.Length; x++)
                 {
-                    if (Hit.transform.gameObject.tag == Tags[x])
+                    if (Hit.transform.gameObject.CompareTag(Tags[x]))
                     {
                         Debug.DrawLine(t.position, Hit.point, Color.green);
                         if (Input.GetKeyDown(KeyCode.E))
