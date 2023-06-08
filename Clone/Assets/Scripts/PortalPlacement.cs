@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Cinemachine;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 [RequireComponent(typeof(CameraMove))]
@@ -9,6 +10,8 @@ using UnityEngine;
     {
         [SerializeField]
         private PortalPair portals;
+        private  Vector3 position;
+        private Vector3 forward;
         public Transform t;
 
         [SerializeField]
@@ -17,12 +20,12 @@ using UnityEngine;
         [SerializeField]
         private Crosshair crosshair;
 
-        private CameraMove cameraMove;
+        // private CameraMove cameraMove;
         private RaycastHit hit;
-        private void Awake()
-        {
-            cameraMove = GetComponent<CameraMove>();
-        }
+        // private void Awake()
+        // {
+        //     cameraMove = GetComponent<CameraMove>();
+        // }
 
         private void Update()
         {
@@ -31,23 +34,15 @@ using UnityEngine;
             //     FirePortal(0, transform.position, transform.forward, 250.0f);
             // }
             // else 
-            if (Input.GetButtonDown("Fire2"))
-            {
-                Physics.Raycast(t.position, t.forward, out hit, 250.0f, layerMask);
-                Invoke("Fire", 0.5f);
-            }
+            // if (Input.GetButtonDown("Fire2"))
+            // {
+            //     Physics.Raycast(t.position, t.forward, out hit, 250.0f, layerMask);
+            //     Invoke("Fire", 0.5f);
+            // }
         }
-        public void Fire()
+        public void OpenPoratal(int portalID, Vector3 pos, Vector3 dir, float distance)
         {
-            FirePortal(1, t.position, t.forward, 250.0f, false);
-        }
-
-        public void FirePortal(int portalID, Vector3 pos, Vector3 dir, float distance, bool auto = true)
-        {
-            if(auto){
-                hit = new RaycastHit();
-                Physics.Raycast(pos, dir, out hit, distance, layerMask);
-            }
+            Physics.Raycast(pos, dir, out hit, distance, layerMask);
             if (hit.collider != null)
             {
                 // If we shoot a portal, recursively fire through the portal.
@@ -74,13 +69,16 @@ using UnityEngine;
 
                     distance -= Vector3.Distance(pos, hit.point);
 
-                    FirePortal(portalID, pos, dir, distance);
+                    OpenPoratal(portalID, pos, dir, distance);
 
                     return;
                 }
 
                 // Orient the portal according to camera look direction and surface direction.
-                var cameraRotation = cameraMove.TargetRotation;
+                //###############################poracaso funcionou melhor dessa forma###################
+                //var cameraRotation = cameraMove.TargetRotation;
+                var cameraRotation = transform.rotation;
+                //#######################################################################################
                 var portalRight = cameraRotation * Vector3.right;
 
                 if (Mathf.Abs(portalRight.x) >= Mathf.Abs(portalRight.z))

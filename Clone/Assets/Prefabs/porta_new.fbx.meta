@@ -1,0 +1,594 @@
+fileFormatVersion: 2
+guid: 32b2f8391d330ed49ac22119081530f2
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: -4061095986712260889
+    second: base|Action
+  - first:
+      74: -7177940861576648934
+    second: base|anim
+  - first:
+      74: 6573929738893582145
+    second: base|Armature.001Action
+  - first:
+      74: -1625884370940405409
+    second: base|Armature.002Action
+  - first:
+      74: 5242829708857491299
+    second: base|Armature.002Action.002
+  - first:
+      74: -74718268873819166
+    second: base|Armature.003Action
+  - first:
+      74: -6936318782113474800
+    second: base|Armature.003Action.001
+  - first:
+      74: -8259362887559592654
+    second: base|baseAction
+  - first:
+      74: -1955176307098080795
+    second: base|circuloforaAction
+  - first:
+      74: -7851075582976624509
+    second: base|meio rAction
+  - first:
+      74: 709847710625068081
+    second: base|porta lAction
+  - first:
+      74: 1645260638169349305
+    second: base|portal lAction
+  - first:
+      74: -8454547265857618204
+    second: circulo_fora|Action
+  - first:
+      74: -5030181313778593814
+    second: circulo_fora|anim
+  - first:
+      74: -4148933273891174944
+    second: circulo_fora|Armature.001Action
+  - first:
+      74: -5547082091155158215
+    second: circulo_fora|Armature.002Action
+  - first:
+      74: -3362203747030707530
+    second: circulo_fora|Armature.002Action.002
+  - first:
+      74: 966702338141167365
+    second: circulo_fora|Armature.003Action
+  - first:
+      74: -1997193953152947606
+    second: circulo_fora|Armature.003Action.001
+  - first:
+      74: 5679094621994904959
+    second: circulo_fora|baseAction
+  - first:
+      74: -6851754422881819808
+    second: circulo_fora|circuloforaAction
+  - first:
+      74: 4740205442299043171
+    second: circulo_fora|meio rAction
+  - first:
+      74: 7038751103770408768
+    second: circulo_fora|porta lAction
+  - first:
+      74: -5318482980600079228
+    second: circulo_fora|portal lAction
+  - first:
+      74: 1233215189165560595
+    second: meio l|Action
+  - first:
+      74: -7484564065197035373
+    second: meio l|anim
+  - first:
+      74: 2108933993203466803
+    second: meio l|Armature.001Action
+  - first:
+      74: -63634648704125210
+    second: meio l|Armature.002Action
+  - first:
+      74: 2396297314941825410
+    second: meio l|Armature.002Action.002
+  - first:
+      74: 1150739646974779059
+    second: meio l|Armature.003Action
+  - first:
+      74: 5379007140325344003
+    second: meio l|Armature.003Action.001
+  - first:
+      74: 6114759012096738258
+    second: meio l|baseAction
+  - first:
+      74: -1658997505000148676
+    second: meio l|circuloforaAction
+  - first:
+      74: -1395197824100790123
+    second: meio l|meio rAction
+  - first:
+      74: -7651138603692194164
+    second: meio l|porta lAction
+  - first:
+      74: 5698110364223639778
+    second: meio l|portal lAction
+  - first:
+      74: -4483013833415380211
+    second: meio r|Action
+  - first:
+      74: -7270868208331120363
+    second: meio r|anim
+  - first:
+      74: 4311647381505095118
+    second: meio r|Armature.001Action
+  - first:
+      74: -4451688523554639688
+    second: meio r|Armature.002Action
+  - first:
+      74: 525485902890986713
+    second: meio r|Armature.002Action.002
+  - first:
+      74: 4652124974698357017
+    second: meio r|Armature.003Action
+  - first:
+      74: 6019499268725405078
+    second: meio r|Armature.003Action.001
+  - first:
+      74: 7977121604543175804
+    second: meio r|baseAction
+  - first:
+      74: -6920482651429532994
+    second: meio r|circuloforaAction
+  - first:
+      74: -3239115898097138571
+    second: meio r|meio rAction
+  - first:
+      74: -8768863776105690718
+    second: meio r|porta lAction
+  - first:
+      74: 2028649986339157566
+    second: meio r|portal lAction
+  - first:
+      74: -5587612184296162216
+    second: porta l|Action
+  - first:
+      74: 3034309384272611167
+    second: porta l|anim
+  - first:
+      74: 1582429175944968940
+    second: porta l|Armature.001Action
+  - first:
+      74: 5298948760343719906
+    second: porta l|Armature.002Action
+  - first:
+      74: 8857838207284584265
+    second: porta l|Armature.002Action.002
+  - first:
+      74: -668091306351168578
+    second: porta l|Armature.003Action
+  - first:
+      74: -5371740055239609949
+    second: porta l|Armature.003Action.001
+  - first:
+      74: -2666073253007660967
+    second: porta l|baseAction
+  - first:
+      74: -5722240063430960505
+    second: porta l|circuloforaAction
+  - first:
+      74: 6454954239265613500
+    second: porta l|meio rAction
+  - first:
+      74: -7381036953527277195
+    second: porta l|porta lAction
+  - first:
+      74: 419861202326706575
+    second: porta l|portal lAction
+  - first:
+      74: -2688904468358193103
+    second: porta r|Action
+  - first:
+      74: 222005311706155370
+    second: porta r|anim
+  - first:
+      74: 523514992427480144
+    second: porta r|Armature.001Action
+  - first:
+      74: 8529830024074300600
+    second: porta r|Armature.002Action
+  - first:
+      74: -8812876744627750505
+    second: porta r|Armature.002Action.002
+  - first:
+      74: 4293083713480745970
+    second: porta r|Armature.003Action
+  - first:
+      74: 8155483852582352605
+    second: porta r|Armature.003Action.001
+  - first:
+      74: -5468303533105723587
+    second: porta r|baseAction
+  - first:
+      74: 5795638756545483872
+    second: porta r|circuloforaAction
+  - first:
+      74: -7570345800101731810
+    second: porta r|meio rAction
+  - first:
+      74: 4840758386559302341
+    second: porta r|porta lAction
+  - first:
+      74: -2817349695007709536
+    second: porta r|portal lAction
+  - first:
+      74: -7128946713166791422
+    second: portal l|Action
+  - first:
+      74: -2822579833180867773
+    second: portal l|anim
+  - first:
+      74: -6278414872084920800
+    second: portal l|Armature.001Action
+  - first:
+      74: -4757078587403201844
+    second: portal l|Armature.002Action
+  - first:
+      74: -8517914484630962938
+    second: portal l|Armature.002Action.002
+  - first:
+      74: 8059371283450663370
+    second: portal l|Armature.003Action
+  - first:
+      74: -3780870593561000813
+    second: portal l|Armature.003Action.001
+  - first:
+      74: -3382550701409417722
+    second: portal l|baseAction
+  - first:
+      74: -1860478393701074582
+    second: portal l|circuloforaAction
+  - first:
+      74: 7328710622827112925
+    second: portal l|meio rAction
+  - first:
+      74: -8613318043195578563
+    second: portal l|porta lAction
+  - first:
+      74: 4079974061065209090
+    second: portal l|portal lAction
+  - first:
+      74: -8414075791039526836
+    second: portaL|Action
+  - first:
+      74: -6461603459113582542
+    second: portaL|anim
+  - first:
+      74: -5279838043787717920
+    second: portaL|Armature.001Action
+  - first:
+      74: -3098303477258907340
+    second: portaL|Armature.001Action.001
+  - first:
+      74: 7881074220226256432
+    second: portaL|Armature.002Action
+  - first:
+      74: -1412460937457833632
+    second: portaL|Armature.002Action.001
+  - first:
+      74: 5441021454670487037
+    second: portaL|Armature.002Action.002
+  - first:
+      74: -1064522820161879056
+    second: portaL|Armature.003Action
+  - first:
+      74: 6696934152747712635
+    second: portaL|Armature.003Action.001
+  - first:
+      74: -4665866784897408324
+    second: portaL|baseAction
+  - first:
+      74: 7753319294427780365
+    second: portaL|circuloforaAction
+  - first:
+      74: 7770707354890545422
+    second: portaL|meio rAction
+  - first:
+      74: 3890392074945457905
+    second: portaL|porta lAction
+  - first:
+      74: -5719378882118259307
+    second: portaL|portal lAction
+  - first:
+      74: -8285440024717517264
+    second: portaL|portaLAction
+  - first:
+      74: -6269982635030302238
+    second: portaL|rootAction
+  - first:
+      74: 1411685796223976716
+    second: root|Action
+  - first:
+      74: 2523610182558039291
+    second: root|anim
+  - first:
+      74: -2361708980171828958
+    second: root|Armature.001Action
+  - first:
+      74: 5461443875923688455
+    second: root|Armature.001Action.001
+  - first:
+      74: 3605415167498384859
+    second: root|Armature.002Action
+  - first:
+      74: -647436225423124986
+    second: root|Armature.002Action.001
+  - first:
+      74: -3031053353090618405
+    second: root|Armature.002Action.002
+  - first:
+      74: -5734095320681382910
+    second: root|Armature.003Action
+  - first:
+      74: -278490903012513519
+    second: root|Armature.003Action.001
+  - first:
+      74: -2081261284815802075
+    second: root|baseAction
+  - first:
+      74: 390702407878755890
+    second: root|circuloforaAction
+  - first:
+      74: 6805819814773210064
+    second: root|meio rAction
+  - first:
+      74: 7551011003629040402
+    second: root|porta lAction
+  - first:
+      74: -1888947401391938533
+    second: root|portal lAction
+  - first:
+      74: -3497465647276883050
+    second: root|portaLAction
+  - first:
+      74: 1401651198070150309
+    second: root|rootAction
+  - first:
+      74: 7721715186239825389
+    second: Armature.001|Action
+  - first:
+      74: 7814988943707651068
+    second: Armature.001|anim
+  - first:
+      74: 2264077025236624520
+    second: Armature.001|Armature.001Action
+  - first:
+      74: -5784005261616917065
+    second: Armature.001|Armature.001Action.001
+  - first:
+      74: -1153017888000365145
+    second: Armature.001|Armature.002Action
+  - first:
+      74: 2916337095380250643
+    second: Armature.001|Armature.002Action.001
+  - first:
+      74: 9186324542560132164
+    second: Armature.001|Armature.002Action.002
+  - first:
+      74: -7376977406845123523
+    second: Armature.001|Armature.003Action
+  - first:
+      74: 3926985212719559015
+    second: Armature.001|Armature.003Action.001
+  - first:
+      74: -2209770896047005279
+    second: Armature.001|baseAction
+  - first:
+      74: 452852762747450680
+    second: Armature.001|circuloforaAction
+  - first:
+      74: 7154956346424109595
+    second: Armature.001|meio rAction
+  - first:
+      74: 7945829742552110303
+    second: Armature.001|porta lAction
+  - first:
+      74: -6721752135280075891
+    second: Armature.001|portal lAction
+  - first:
+      74: 5966444344725953357
+    second: Armature.001|portaLAction
+  - first:
+      74: -4990785522407736418
+    second: Armature.001|rootAction
+  - first:
+      74: 7347177940927086498
+    second: Armature.002|Action
+  - first:
+      74: -8034297042117685226
+    second: Armature.002|anim
+  - first:
+      74: 6906267723572508546
+    second: Armature.002|Armature.001Action
+  - first:
+      74: 4264612480362930771
+    second: Armature.002|Armature.001Action.001
+  - first:
+      74: 5138602965388526686
+    second: Armature.002|Armature.002Action
+  - first:
+      74: 4028146881832135640
+    second: Armature.002|Armature.002Action.001
+  - first:
+      74: -2160657748010038229
+    second: Armature.002|Armature.002Action.002
+  - first:
+      74: -5505715565960345857
+    second: Armature.002|Armature.003Action
+  - first:
+      74: -498013366253705714
+    second: Armature.002|Armature.003Action.001
+  - first:
+      74: -8162692328473799800
+    second: Armature.002|baseAction
+  - first:
+      74: -4211335257583215117
+    second: Armature.002|circuloforaAction
+  - first:
+      74: -8627379517585475068
+    second: Armature.002|meio rAction
+  - first:
+      74: -8255812073828159815
+    second: Armature.002|porta lAction
+  - first:
+      74: -8121818757392553876
+    second: Armature.002|portal lAction
+  - first:
+      74: 3822679682451090979
+    second: Armature.002|portaLAction
+  - first:
+      74: -1716223420647431584
+    second: Armature.002|rootAction
+  - first:
+      74: -5040882386089420204
+    second: Armature.003|Action
+  - first:
+      74: 4060757650826957998
+    second: Armature.003|anim
+  - first:
+      74: 3598511621795961054
+    second: Armature.003|Armature.001Action
+  - first:
+      74: 9037844244156796830
+    second: Armature.003|Armature.001Action.001
+  - first:
+      74: -894896622507537408
+    second: Armature.003|Armature.002Action
+  - first:
+      74: 4362092049284334809
+    second: Armature.003|Armature.002Action.001
+  - first:
+      74: -5228145402997590779
+    second: Armature.003|Armature.002Action.002
+  - first:
+      74: 8645343760740499401
+    second: Armature.003|Armature.003Action
+  - first:
+      74: -6846863305485351820
+    second: Armature.003|Armature.003Action.001
+  - first:
+      74: 2323207483592669465
+    second: Armature.003|baseAction
+  - first:
+      74: 8222686669314881847
+    second: Armature.003|circuloforaAction
+  - first:
+      74: 4831458707241876259
+    second: Armature.003|meio rAction
+  - first:
+      74: -2836055125570681894
+    second: Armature.003|porta lAction
+  - first:
+      74: -8420867058978269244
+    second: Armature.003|portal lAction
+  - first:
+      74: 5100057161989670671
+    second: Armature.003|portaLAction
+  - first:
+      74: 4428874338644437291
+    second: Armature.003|rootAction
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

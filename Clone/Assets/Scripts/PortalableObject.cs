@@ -17,7 +17,6 @@ public class PortalableObject : MonoBehaviour
     private new Rigidbody rigidbody;
     protected new Collider collider;
     public bool free;
-    public Collider everActivePortal;
 
     private static readonly Quaternion halfTurn = Quaternion.Euler(0.0f, 180.0f, 0.0f);
 
@@ -77,10 +76,6 @@ public class PortalableObject : MonoBehaviour
         this.inPortal = inPortal;
         this.outPortal = outPortal;
 
-        if (wallCollider == null)
-        {
-            wallCollider = everActivePortal;
-        }
         Physics.IgnoreCollision(collider, wallCollider);
         cloneObject.SetActive(false);
 
@@ -93,10 +88,7 @@ public class PortalableObject : MonoBehaviour
         {
             return;
         } 
-        if (wallCollider == null)
-        {
-            wallCollider = everActivePortal;
-        }
+
         Physics.IgnoreCollision(collider, wallCollider, false);
         --inPortalCount;
 
