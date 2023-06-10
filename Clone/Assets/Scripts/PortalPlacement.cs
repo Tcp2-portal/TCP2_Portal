@@ -1,8 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using Cinemachine;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 
 [RequireComponent(typeof(CameraMove))]
@@ -43,6 +38,7 @@ using UnityEngine;
         public void OpenPoratal(int portalID, Vector3 pos, Vector3 dir, float distance)
         {
             Physics.Raycast(pos, dir, out hit, distance, layerMask);
+            Vector3 velocity = GetComponent<Rigidbody>().velocity;
             if (hit.collider != null)
             {
                 // If we shoot a portal, recursively fire through the portal.
@@ -97,7 +93,6 @@ using UnityEngine;
 
                 // Attempt to place the portal.
                 bool wasPlaced = portals.Portals[portalID].PlacePortal(hit.collider, hit.point, portalRotation);
-
                 if (wasPlaced)
                 {
                     crosshair.SetPortalPlaced(portalID, true);

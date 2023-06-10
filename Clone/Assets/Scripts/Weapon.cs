@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using UnityEngine.Rendering;
 
 [RequireComponent(typeof(PoolProjectiles))]
 public class Weapon : MonoBehaviour
@@ -12,6 +13,7 @@ public class Weapon : MonoBehaviour
     public GameObject currentProjectile;
     private int portal;
 
+    private int i = 0;
     public int PortalActive { get => portal; set => portal = value; }
 
     public void Awake()
@@ -27,15 +29,17 @@ public class Weapon : MonoBehaviour
     }
     public void Fire()
     {
-        portalP.OpenPoratal(portal, t.position, t.forward, 250);
-        // currentProjectile = pool.GetProjectile(0);
-        // currentProjectile.transform.position = t.position;
-        // currentProjectile.transform.forward = t.forward;
-        // Debug.Log(pool.GetId(currentProjectile));
+        currentProjectile = pool.GetProjectile(0);
+        currentProjectile.GetComponent<Projectile>().Initialize(t);
     }
-    public void Hit(int id)
-    {
-        pool.PutProjectile(id);
+    public void Hit(Transform bullet)
+    {   
+        portalP.OpenPoratal(portal, t.position, bullet.forward, 250);
+
+    for(int i = 0; i < pool.poolSize; i++)
+        {
+            pool.PutProjectile(i);
+        }
     }
     public void Misfire()
     {

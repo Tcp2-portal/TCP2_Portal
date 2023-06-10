@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Jobs;
 using UnityEngine.PlayerLoop;
 using UnityEngine.Rendering;
 
@@ -11,21 +13,20 @@ public class Projectile : MonoBehaviour
     public float speed = 3.0f;
     public int id;
     PortalPlacement portalP;
-    private Quaternion startRotation;
+    public LayerMask mask;
 
-    /// <summary>
-    /// This function is called when the object becomes enabled and active.
-    /// </summary>
-    void OnEnable()
+    private RaycastHit hit;
+    private Vector3 startPosition;
+
+    public void Initialize(Transform t)
     {
-        this.startRotation = transform.rotation;
-    }
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("LevelGeom"))
+        transform.SetPositionAndRotation(t.position, t.rotation);
+        Physics.Raycast(transform.position, transform.forward, out hit, 100, mask);
+
+        if (hit.collider != null && (1 < hit.collider.gameObject.layer) & mask > 0)
         {
-            portalP.OpenPoratal(1, gun.t.position, gun.t.forward, 250.0f);
-            gun.GetComponent<Weapon>().Hit(id);
+            startPosition = transform.position;
+            gameObject.SetActive(true);
         }
         else
         {
@@ -35,18 +36,17 @@ public class Projectile : MonoBehaviour
     public void Update()
     {
         MoveFoward();
+        ChackHit();
+    }
+    private void ChackHit()
+    {
+        if (Vector3.Distance(transform.position, startPosition) > Vector3.Distance(hit.point, startPosition))
+        {
+            gun.GetComponent<Weapon>().Hit(transform);
+        }
     }
     private void MoveFoward()
     {
-        transform.rotation = startRotation;
-        transform.position += Vector3.forward * Time.deltaTime * speed;
-    }
-    private void ResetPosition()
-    {
-        transform.position = new Vector3(0, 0, 0);
-    }
-    void OnDisable()
-    {
-        ResetPosition();
+        transform.position += transform.forward * Time.deltaTime * speed;
     }
 }

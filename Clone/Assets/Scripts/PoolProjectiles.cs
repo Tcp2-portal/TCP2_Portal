@@ -1,10 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Xml.Serialization;
-using UnityEditor.SceneManagement;
 using UnityEngine;
-using UnityEngine.Events;
 
+[RequireComponent(typeof(Weapon))]
 public class PoolProjectiles : MonoBehaviour
 {
     public GameObject projectileTypes;
@@ -32,7 +29,8 @@ public class PoolProjectiles : MonoBehaviour
 
     private void CreateElement()
     {
-        GameObject projectile = Instantiate(projectileTypes, transform);
+        GameObject projectile = Instantiate(projectileTypes, null);
+        projectile.GetComponent<Projectile>().gun = GetComponent<Weapon>();
         projectile.SetActive(false);  
         pool.Add(projectile);
     }
@@ -54,7 +52,6 @@ public class PoolProjectiles : MonoBehaviour
             index = (index + 1) % pool.Count;
             count++;
         }
-        pool[index].SetActive(true);
         return pool[index];
     }
     public int GetId(GameObject projectile){
