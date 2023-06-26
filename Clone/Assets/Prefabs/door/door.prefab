@@ -689,11 +689,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3254845456411674079, guid: 28921b131f770584495a9e7cc8c77918, type: 3}
       propertyPath: saiuDoColisor.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3254845456411674079, guid: 28921b131f770584495a9e7cc8c77918, type: 3}
       propertyPath: entrouNoColisor.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254845456411674079, guid: 28921b131f770584495a9e7cc8c77918, type: 3}
+      propertyPath: saiuDoColisor.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254845456411674079, guid: 28921b131f770584495a9e7cc8c77918, type: 3}
+      propertyPath: entrouNoColisor.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3254845456411674079, guid: 28921b131f770584495a9e7cc8c77918, type: 3}
       propertyPath: saiuDoColisor.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -702,7 +710,7 @@ PrefabInstance:
     - target: {fileID: 3254845456411674079, guid: 28921b131f770584495a9e7cc8c77918, type: 3}
       propertyPath: saiuDoColisor.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 971551492395965039}
     - target: {fileID: 3254845456411674079, guid: 28921b131f770584495a9e7cc8c77918, type: 3}
       propertyPath: saiuDoColisor.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -730,7 +738,7 @@ PrefabInstance:
     - target: {fileID: 3254845456411674079, guid: 28921b131f770584495a9e7cc8c77918, type: 3}
       propertyPath: entrouNoColisor.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 971551492395965039}
     - target: {fileID: 3254845456411674079, guid: 28921b131f770584495a9e7cc8c77918, type: 3}
       propertyPath: entrouNoColisor.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -757,7 +765,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3254845456411674079, guid: 28921b131f770584495a9e7cc8c77918, type: 3}
       propertyPath: saiuDoColisor.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: CloseDoor
+      value: SetTrigger
       objectReference: {fileID: 0}
     - target: {fileID: 3254845456411674079, guid: 28921b131f770584495a9e7cc8c77918, type: 3}
       propertyPath: saiuDoColisor.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
@@ -785,7 +793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3254845456411674079, guid: 28921b131f770584495a9e7cc8c77918, type: 3}
       propertyPath: entrouNoColisor.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: OpenDoor
+      value: SetTrigger
       objectReference: {fileID: 0}
     - target: {fileID: 3254845456411674079, guid: 28921b131f770584495a9e7cc8c77918, type: 3}
       propertyPath: entrouNoColisor.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
@@ -813,7 +821,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3254845456411674079, guid: 28921b131f770584495a9e7cc8c77918, type: 3}
       propertyPath: saiuDoColisor.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: ControlerToTheDoor, Assembly-CSharp
+      value: UnityEngine.Animator, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3254845456411674079, guid: 28921b131f770584495a9e7cc8c77918, type: 3}
       propertyPath: saiuDoColisor.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
@@ -841,7 +849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3254845456411674079, guid: 28921b131f770584495a9e7cc8c77918, type: 3}
       propertyPath: entrouNoColisor.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: ControlerToTheDoor, Assembly-CSharp
+      value: UnityEngine.Animator, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3254845456411674079, guid: 28921b131f770584495a9e7cc8c77918, type: 3}
       propertyPath: entrouNoColisor.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
@@ -862,6 +870,22 @@ PrefabInstance:
     - target: {fileID: 3254845456411674079, guid: 28921b131f770584495a9e7cc8c77918, type: 3}
       propertyPath: entrouNoColisor.m_PersistentCalls.m_Calls.Array.data[6].m_TargetAssemblyTypeName
       value: ControlerToTheDoor, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254845456411674079, guid: 28921b131f770584495a9e7cc8c77918, type: 3}
+      propertyPath: saiuDoColisor.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: unpressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254845456411674079, guid: 28921b131f770584495a9e7cc8c77918, type: 3}
+      propertyPath: entrouNoColisor.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: pressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254845456411674079, guid: 28921b131f770584495a9e7cc8c77918, type: 3}
+      propertyPath: saiuDoColisor.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254845456411674079, guid: 28921b131f770584495a9e7cc8c77918, type: 3}
+      propertyPath: entrouNoColisor.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3254845457122285666, guid: 28921b131f770584495a9e7cc8c77918, type: 3}
       propertyPath: m_RootOrder
@@ -916,5 +940,10 @@ PrefabInstance:
 --- !u!4 &683266308491340315 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3254845457122285666, guid: 28921b131f770584495a9e7cc8c77918, type: 3}
+  m_PrefabInstance: {fileID: 2616868068014371449}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &971551492395965039 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2966569559362643990, guid: 28921b131f770584495a9e7cc8c77918, type: 3}
   m_PrefabInstance: {fileID: 2616868068014371449}
   m_PrefabAsset: {fileID: 0}

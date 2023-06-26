@@ -11,8 +11,12 @@ public class Weapon : MonoBehaviour
     private PoolProjectiles pool;
     public PortalPlacement portalP;
     public GameObject currentProjectile;
+    
+    public Animator gun;
     private int portal;
+    private Material mat;
 
+    
     private int i = 0;
     public int PortalActive { get => portal; set => portal = value; }
 
@@ -25,12 +29,13 @@ public class Weapon : MonoBehaviour
         if (Input.GetButtonDown("Fire2"))
         {
             Fire();
+            gun.SetTrigger("fire");
         }
     }
     public void Fire()
     {
         currentProjectile = pool.GetProjectile(0);
-        currentProjectile.GetComponent<Projectile>().Initialize(t);
+        currentProjectile.GetComponent<Projectile>().Initialize(t, portal);
     }
     public void Hit(Transform bullet)
     {   

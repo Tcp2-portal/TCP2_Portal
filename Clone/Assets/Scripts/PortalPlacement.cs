@@ -42,8 +42,12 @@ using UnityEngine;
             if (hit.collider != null)
             {
                 // If we shoot a portal, recursively fire through the portal.
+                if (hit.collider.CompareTag("Ray")){
+                    return;
+                }
                 if (hit.collider.tag == "Portal")
                 {
+                    //AudioManager.Instance.PlaySFX("tiro_1");
                     var inPortal = hit.collider.GetComponent<Portal>();
 
                     if (inPortal == null)

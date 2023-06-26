@@ -14,6 +14,9 @@ public class Segurar_Box : MonoBehaviour
     public GameObject _local;
     public LayerMask _layerMask;
 
+    public GameObject lightBolt;
+    public ParticleSystem particle;
+
 private void Start()
 {
 }
@@ -23,6 +26,8 @@ private void Start()
         {
             ObjSegurando.layer = LayerMask.NameToLayer("IgnoreBody");
             ObjSegurando.GetComponent<PortalableObject>().free = false;
+            lightBolt.SetActive(true);
+            particle.Play();
             if (Input.GetKeyDown(KeyCode.E))
             {
                 _segurando = false;
@@ -34,6 +39,9 @@ private void Start()
                 {
                     ObjSegurando.transform.parent = null;
                     ObjSegurando.GetComponent<Rigidbody>().isKinematic = false;
+                    
+                    lightBolt.SetActive(false);
+                    particle.Stop();
                 }
                 ObjSegurando = null;
                 return;
