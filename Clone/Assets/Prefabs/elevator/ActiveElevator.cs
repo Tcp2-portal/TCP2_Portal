@@ -5,15 +5,22 @@ using UnityEngine.Events;
 
 public class ActiveElevator : MonoBehaviour
 {
-    public UnityEvent eventUp;
-    public UnityEvent eventDown;
+    public UnityEvent eventEnter;
+    public UnityEvent eventExit;
+    public UnityEvent elevator;
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player") && Input.GetMouseButtonUp(0))
+        {
+            this.elevator.Invoke();
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
-        this.eventUp.Invoke();
+        this.eventEnter.Invoke();
     }
     private void OnTriggerExit(Collider other)
     {
-        this.eventDown.Invoke();
-    
+        this.eventExit.Invoke();
     }
 }

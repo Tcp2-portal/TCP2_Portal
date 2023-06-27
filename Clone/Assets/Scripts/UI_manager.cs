@@ -32,17 +32,15 @@ public class UI_manager : MonoBehaviour
     {
         foreach (GameObject cubo in cubos)
         {
-            distObj = Vector3.Distance(player.transform.position, cubo.transform.position);
-            if (distObj <= minDist)
-            {
-                canvas.gameObject.SetActive(true);
-            }
-            if (distObj <= 1.2f || distObj > minDist)
-            {
-                canvas.gameObject.SetActive(false);
-            }
+                distObj = Vector3.Distance(player.transform.position, cubo.transform.position);
+                if (distObj <= minDist ){
+                    canvas.gameObject.SetActive(true);
+                }
+                if (distObj <= 1.2f || distObj > minDist)
+                {
+                    canvas.gameObject.SetActive(false);
+                }
         }
-       
     }
 
     public void SairJogo()

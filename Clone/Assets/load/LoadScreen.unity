@@ -329,7 +329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cenaACarregar: cena test
   TempoFixoSeg: 5
-  TipoDeCarregamento: 1
+  TipoDeCarregamento: 0
   barradeCarregamento: {fileID: 1800693988}
   TextoProgresso: {fileID: 1223555819}
 --- !u!1 &704611380

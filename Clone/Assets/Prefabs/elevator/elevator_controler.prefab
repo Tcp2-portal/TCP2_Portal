@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 1433570245071880264}
   - component: {fileID: 6812574040236804842}
   m_Layer: 8
-  m_Name: trigger
+  m_Name: sonar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -138,8 +138,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 21.403372, y: 26.068962, z: 20.92953}
-  m_Center: {x: -0.19633353, y: -13.75621, z: -0.19693398}
+  m_Size: {x: 50.11608, y: 40.54089, z: 49.458904}
+  m_Center: {x: 0.38250208, y: -6.6006694, z: -0.21520226}
 --- !u!114 &6812574040236804842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,36 +152,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c8fd92eb5ff3a4194e5fe4a6be3c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventUp:
+  eventEnter:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8727207690108145104}
-        m_TargetAssemblyTypeName: ElevatorControler, Assembly-CSharp
-        m_MethodName: Up
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  eventDown:
+      m_Calls: []
+  eventExit:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8727207690108145104}
-        m_TargetAssemblyTypeName: ElevatorControler, Assembly-CSharp
-        m_MethodName: Down
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  elevator:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &3537848114802488842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2482136145753528645}
+  - component: {fileID: 402334667316457889}
+  - component: {fileID: 4537146807651387793}
+  m_Layer: 8
+  m_Name: inside
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2482136145753528645
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3537848114802488842}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2394325762654629952}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &402334667316457889
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3537848114802488842}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.067563, y: 33.406128, z: 8.355282}
+  m_Center: {x: -0.011588028, y: -10.132134, z: -0.7943072}
+--- !u!114 &4537146807651387793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3537848114802488842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4c8fd92eb5ff3a4194e5fe4a6be3c17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  eventExit:
+    m_PersistentCalls:
+      m_Calls: []
+  elevator:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5428296916495291886
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,6 +255,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1985607416019427885}
+  - {fileID: 2482136145753528645}
   - {fileID: 7628041952413962203}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -246,7 +292,7 @@ Transform:
   - {fileID: 7142972143770012859}
   - {fileID: 1388330031}
   m_Father: {fileID: 2394325762654629952}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &4725277835172192991
 Animator:
@@ -279,6 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 183cffb70978058489ef952764f8bd10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
 --- !u!1 &9191110014157749024
 GameObject:
   m_ObjectHideFlags: 0

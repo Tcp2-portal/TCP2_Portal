@@ -47,7 +47,6 @@ using UnityEngine;
                 }
                 if (hit.collider.tag == "Portal")
                 {
-                    //AudioManager.Instance.PlaySFX("tiro_1");
                     var inPortal = hit.collider.GetComponent<Portal>();
 
                     if (inPortal == null)

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 
 public class Segurar_Box : MonoBehaviour
@@ -9,6 +10,8 @@ public class Segurar_Box : MonoBehaviour
     public GameObject ObjSegurando;
     [Space(30)]
     public float _distanciaMax;
+    public Transform player;
+    public Transform floor;
     public Transform t;
     public bool _segurando;
     public GameObject _local;
@@ -17,48 +20,49 @@ public class Segurar_Box : MonoBehaviour
     public GameObject lightBolt;
     public ParticleSystem particle;
 
-private void Start()
-{
-}
-    void Update()
+    private void Start()
+    {
+    }
+    private IEnumerator ReleaseObjectDelayed()
+    {
+        yield return new WaitForSeconds(0.1f); 
+        ObjSegurando.transform.parent = null;
+        ObjSegurando.GetComponent<Rigidbody>().isKinematic = false;
+        lightBolt.SetActive(false);
+        particle.Stop();
+        ObjSegurando.GetComponent<PortalableObject>().free = true;
+
+        _segurando = false;
+        Physics.IgnoreCollision(ObjSegurando.GetComponent<Collider>(), player.gameObject.GetComponent<Collider>(), false);
+        Physics.Simulate(Time.fixedDeltaTime);
+    }
+    private void Update()
     {
         if (_segurando == true)
         {
-            ObjSegurando.layer = LayerMask.NameToLayer("IgnoreBody");
-            ObjSegurando.GetComponent<PortalableObject>().free = false;
-            lightBolt.SetActive(true);
-            particle.Play();
             if (Input.GetKeyDown(KeyCode.E))
             {
-                _segurando = false;
-
-                ObjSegurando.layer = LayerMask.NameToLayer("Cube");
-                ObjSegurando.GetComponent<PortalableObject>().free = true;
-
+                //ObjSegurando.layer = LayerMask.NameToLayer("Cube");
+                Vector3 lastPos = ObjSegurando.transform.position;
                 if (ObjSegurando.GetComponent<Rigidbody>())
                 {
                     ObjSegurando.transform.parent = null;
                     ObjSegurando.GetComponent<Rigidbody>().isKinematic = false;
-                    
-                    lightBolt.SetActive(false);
-                    particle.Stop();
+
+                    StartCoroutine(ReleaseObjectDelayed());
                 }
-                ObjSegurando = null;
-                return;
             }
 
         }
         if (_segurando == false)
         {
             RaycastHit Hit = new RaycastHit();
-
             if (Physics.Raycast(t.position, t.forward, out Hit, _distanciaMax, _layerMask))
             {
                 for (int x = 0; x < Tags.Length; x++)
                 {
                     if (Hit.transform.gameObject.CompareTag(Tags[x]))
                     {
-                        Debug.DrawLine(t.position, Hit.point, Color.green);
                         if (Input.GetKeyDown(KeyCode.E))
                         {
                             _segurando = true;
@@ -71,6 +75,13 @@ private void Start()
                             {
                                 ObjSegurando.GetComponent<Rigidbody>().isKinematic = true;
                             }
+
+                            //ObjSegurando.layer = LayerMask.NameToLayer("IgnoreBody");
+                            Physics.IgnoreCollision(ObjSegurando.GetComponent<Collider>(), player.gameObject.GetComponent<Collider>(), true);
+                            ObjSegurando.GetComponent<PortalableObject>().free = false;
+                            lightBolt.SetActive(true);
+                            particle.Play();
+
                         }
                     }
                 }

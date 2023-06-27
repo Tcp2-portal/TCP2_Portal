@@ -34,6 +34,7 @@ public class Weapon : MonoBehaviour
     }
     public void Fire()
     {
+        AudioManager.Instance.PlaySFX("tiro_1");
         currentProjectile = pool.GetProjectile(0);
         currentProjectile.GetComponent<Projectile>().Initialize(t, portal);
     }
